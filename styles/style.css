@@ -1,0 +1,27 @@
+.header{
+    background-color: rgb(255, 255, 115);
+    color: rgb(69, 140, 221);
+}
+.menu__link{
+    color: black;
+}
+.header__button {
+    color: black;
+}
+.basket{
+    background-color: rgb(69, 140, 221);
+}
+.product__discount__sale{
+    color: red;
+}
+.footer{
+    background-color: rgb(235, 235, 135);
+}
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Regular.ttf") format("ttf");
+    font-weight: normal;
+}
+body {
+    font-family: "Ubuntu";
+}
