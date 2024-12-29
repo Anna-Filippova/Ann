@@ -1,154 +1,115 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
   </head>
   <body>
     <header class="header">
       <h1 class="header__title">Wardrobe</h1>
-      <nav class="header__menu menu">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link" href="#">Одежда</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Обувь</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Аксессуары</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Выгодные предложения</a>
-          </li>
+      <form class="header__search search" action="/" method="get">
+        <input class="search__field" type="search" name="text" placeholder="Введите название товара">
+        <button class="search__submit" type="submit">Поиск</button>
+      </form>
+      <div class="header__buttons">
+        <button class="header__button" type="button">
+        <img class="header__button-icon" src="images/cart.svg" alt="Вход" width="30" height="30">
+        <span class="header__button-text">Корзина</span>
+        </button>
+        <button class="header__button" type="button">
+        <img class="header__button-icon" src="images/user.png" alt="Вход" width="30" height="30">
+        <span class="header__button-text">Вход</span>
+        </button>
+      </div>
+      <nav class="header__menu">
+        <ul class="header__list">
+          <li class="header__item"><a class="header__item-link" href="#">Одежда</a></li>
+          <li class="header__item"><a class="header__item-link" href="#">Обувь</a></li>
+          <li class="header__item"><a class="header__item-link" href="#">Аксессуары</a></li>
         </ul>
       </nav>
-      <a class="header__button" href="#">Корзина</a>
-      <a class="header__button" href="#">Вход</a>
     </header>
     <main class="main">
-      <section class="about">
-        <div class="about__item">
+      <section class="section about">
+        <div class="about__content">
           <h2 class="about__title">Сезонное предложение</h2>
-          <img
-            class="about__image"
-            src="images/coat.jpg"
-            alt="пальто"
-            width="600"
-          />
-          <a class="about__link" href="#">К покупкам!</a>
+          <p class="about__description">Твои любимые бренды по низким ценам!</p>
+          <img class="about__image" src="images/coat.jpg" alt="пальто" width="600">
+          <button class="about__button">К покупкам!</button>
         </div>
       </section>
-      <section class="profitably">
+      <section class="section profitably">
         <div class="profitably__item">
           <h2 class="profitably__title">Выгодно</h2>
           <a class="profitably__link" href="#">Ещё</a>
         </div>
-        <ul class="profitably__products products">
+        <ul class="profitably__list product">
           <li class="product__item">
-            <img
-              class="product__image"
-              src="images/turtleneck.jpg"
-              alt="водолазка"
-              width="200"
-            />
+            <img class="product__image" src="images/turtleneck.jpg" alt="водолазка" width="200">
             <p class="product__discount"><mark>-20%</mark></p>
-            <p class="product__discount__sale"><b>800 рублей</b></p>
-            <p class="product__del__sale">
-              <del><small>990 рублей</small></del>
-            </p>
+            <p class="product__discount-sale"><b>800 рублей</b></p>
+            <p class="product__del-sale"><del><small>990 рублей</small></del></p>
             <p class="product__title">Водолазка с высоким горлом</p>
-            <button class="basket">В корзину</button>
+            <button class="product__basket">В корзину</button>
           </li>
           <li class="product__item">
-            <img
-              class="product__image"
-              src="images/shirt.webp"
-              alt="рубашка"
-              width="200"
-            />
+            <img class="product__image" src="images/shirt.webp" alt="рубашка" width="200">
             <p class="product__discount"><mark>-15%</mark></p>
-            <p class="product__discount__sale"><b>1500 рублей</b></p>
-            <p class="product__del__sale">
-              <del><small>1800 рублей</small></del>
-            </p>
+            <p class="product__discount-sale"><b>1500 рублей</b></p>
+            <p class="product__del-sale"><del><small>1800 рублей</small></del></p>
             <p class="product__title">Рубашка с укороченным рукавом</p>
-            <button class="basket">В корзину</button>
+            <button class="product__basket">В корзину</button>
           </li>
           <li class="product__item">
-            <img
-              class="product__image"
-              src="images/boots.jpg"
-              alt="сапоги"
-              width="200"
-            />
+            <img class="product__image" src="images/boots.jpg" alt="сапоги" width="200">
             <p class="product__discount"><mark>-20%</mark></p>
-            <p class="product__discount__sale"><b>3600 рублей</b></p>
-            <p class="product__del__sale">
-              <del><small>4500 рублей</small></del>
-            </p>
-            <p class="product__title">
-              Осенние сапоги на каблуке из натуральной кожи
-            </p>
-            <button class="basket">В корзину</button>
+            <p class="product__discount-sale"><b>3600 рублей</b></p>
+            <p class="product__del-sale"><del><small>4500 рублей</small></del></p>
+            <p class="product__title">Осенние сапоги на каблуке из натуральной кожи</p>
+            <button class="product__basket">В корзину</button>
           </li>
           <li class="product__item">
-            <img
-              class="product__image"
-              src="images/sweatshirt.jpg"
-              alt="свитшот"
-              width="200"
-            />
+            <img class="product__image" src="images/sweatshirt.jpg" alt="свитшот" width="200">
             <p class="product__discount"><mark>-30%</mark></p>
-            <p class="product__discount__sale"><b>1200 рублей</b></p>
-            <p class="product__del__sale">
-              <del><small>1600 рублей</small></del>
-            </p>
+            <p class="product__discount-sale"><b>1200 рублей</b></p>
+            <p class="product__del-sale"><del><small>1600 рублей</small></del></p>
             <p class="product__title">Свитшот оверсайз</p>
-            <button class="basket">В корзину</button>
+            <button class="product__basket">В корзину</button>
           </li>
         </ul>
       </section>
-      <section class="recommendations">
+      <section class="section recommendations">
         <div class="recommendations__item">
           <h2 class="recommendations__title">Рекомендуем</h2>
-          <a class="recommendation__link" href="#">Ещё</a>
+          <a class="recommendations__link" href="#">Ещё</a>
         </div>
-        <ul class="recommendations__list">
-          <li class="recommendations__item">
-            <img
-              class="recommendations__image"
-              src="images/t-shirt.jpg"
-              alt="футболка"
-              width="200"
-            />
-            <p class="recommendations__sale"><b>450 рублей</b></p>
-            <p class="recommendations__title">Футболка базовая</p>
-            <button class="basket">В корзину</button>
+        <ul class="recommendations__list product">
+          <li class="product__item">
+            <img class="product__image" src="images/t-shirt.jpg" alt="футболка" width="200">
+            <p class="product__sale"><b>450 рублей</b></p>
+            <p class="product__title">Футболка базовая</p>
+            <button class="product__basket">В корзину</button>
           </li>
-          <li class="recommendations__item">
-            <img
-              class="recommendations__image"
-              src="images/sweatpants.webp"
-              alt="штаны"
-              width="200"
-            />
-            <p class="recommendations__sale"><b>990 рублей</b></p>
-            <p class="recommendations__title">Спортивные штаны</p>
-            <button class="basket">В корзину</button>
+          <li class="product__item">
+            <img class="product__image" src="images/sweatpants.webp" alt="штаны" width="200">
+            <p class="product__sale"><b>990 рублей</b></p>
+            <p class="product__title">Спортивные штаны</p>
+            <button class="product__basket">В корзину</button>
           </li>
-          <li class="recommendations__item">
-            <img
-              class="recommendations__image"
-              src="images/hoodie.jpg"
-              alt="худи"
-              width="200"
-            />
-            <p class="recommendations__sale"><b>1200 рублей</b></p>
-            <p class="recommendations__title">Худи оверсайз</p>
-            <button class="basket">В корзину</button>
+          <li class="product__item">
+            <img class="product__image" src="images/hoodie.jpg" alt="худи" width="200">
+            <p class="product__sale"><b>1200 рублей</b></p>
+            <p class="product__title">Худи оверсайз</p>
+            <button class="product__basket">В корзину</button>
+          </li>
+          <li class="product__item">
+            <img class="product__image" src="images/rashguard.webp" alt="рашгард" width="200">
+            <p class="product__sale"><b>1300 рублей</b></p>
+            <p class="product__title">Рашгард</p>
+            <button class="product__basket">В корзину</button>
           </li>
         </ul>
       </section>
@@ -156,70 +117,63 @@
     <footer class="footer">
       <h2 class="footer__title">Разработчик</h2>
       <p class="footer__object">Филиппова Анна ЭК-31</p>
-      <div class="footer__item">
+      <div class="footer__part">
         <h2 class="footer__title">Помощь</h2>
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#">Оформление заказа</a></li>
-          <li class="footer__item"><a class="footer__link href="#">Оплата товаров</a></li>
-          <li class="footer__item"><a class="footer__link href="#">Доставка</a></li>
-          <li class="footer__item"><a class="footer__link href="#">Адреса ПВЗ</a></li>
-          <li class="footer__item"><a class="footer__link href="#">Возврат товара</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Оформление заказа</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Оплата товаров</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Доставка</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Адреса ПВЗ</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Возврат товара</a></li>
         </ul>
       </div>
-      <div class="footer__item">
+      <div class="footer__part">
         <h2 class="footer__title">Продавцам</h2>
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link href="#">Начать продавать</a></li>
-          <li class="footer__item"><a class="footer__link href="#">Открыть пункт выдачи</a></li>
-          <li class="footer__item"><a class="footer__link href="#">Транспортировка</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Начать продавать</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Открыть пункт выдачи</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Транспортировка</a></li>
         </ul>
       </div>
-      <div class="footer__item">
+      <div class="footer__part">
         <h2 class="footer__title">Компания</h2>
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link href="#">О нас</a></li>
-          <li class="footer__item"><a class="footer__link href="#">Контакты</a></li>
-          <li class="footer__item"><a class="footer__link href="#">Адреса</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">О нас</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Контакты</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Адреса</a></li>
         </ul>
       </div>
     </footer>
-    <section>
-      <form action="/">
-        <h2>Вход</h2>
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Введите номер телефона"
-          required
-        />
-        <button>Войти</button>
-        <p>ИЛИ</p>
-        <a href="#">Регистрация</a>
+    <section class="section form">
+      <form class="form" action="/">
+        <h2 class="form__title">Вход</h2>
+        <input class="form__input" type="tel" name="phone" placeholder="Введите номер телефона" required>
+        <button class="form__button">Войти</button>
+        <p class="form__separator">ИЛИ</p>
+        <a class="form__link" href="#">Регистрация</a>
       </form>
     </section>
-    <section>
-      <form action="/">
-        <h2>Регистрация</h2>
-        <p>Введите ваши данные</p>
-        <p>Фамилия</p>
-        <input type="text" name="name" placeholder="Введите фамилию" required />
-        <p>Имя</p>
-        <input
-          type="text"
-          name="surname"
-          placeholder="Введите имя"
-          required
-        />
-        <p>Почта</p>
-        <input
-          type="email"
-          name="email"
-          placeholder="Введите почту"
-          required
-        />
-        <p>Номер телефона</p>
-        <input type="tel" name="phone" placeholder="Введите номер телефона" required />
-        <button>Зарегистрироваться</button>
+    <section class="section form">
+      <form class="form" action="/">
+        <h2 class="form__title">Регистрация</h2>
+        <p class="form__desk">Введите ваши данные</p>
+        <div class="form__item">
+        <label class="form__lable">Фамилия</label>
+        <input class="form__input" type="text" name="name" placeholder="Введите фамилию" required>
+        </div>
+        <div class="form__item">
+        <label class="form__lable">Имя</label>
+        <input class="form__input" type="text" name="surname" placeholder="Введите имя" required>
+        </div>
+        <div class="form__item">
+        <label class="form__lable">Почта</label>
+        <input class="form__input" type="email" name="email" placeholder="Введите почту" required>
+        </div>
+        <div class="form__item">
+        <label class="form__lable">Номер телефона</label>
+        <input class="form__input" type="tel" name="phone" placeholder="Введите номер телефона" required>
+        </div>
+        <button class="form__button">Зарегистрироваться</button>
       </form>
     </section>
   </body>
