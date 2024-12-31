@@ -4,3 +4,10 @@
 .footer__list {
     color: black;
 }
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;   
+    color: black;
+} 
