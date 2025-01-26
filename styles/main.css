@@ -1,47 +1,142 @@
- 
 .about__title {
     display: flex;
     justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 1px;   
+    padding-top: 5px;
+    padding-bottom: 0;  
+    font-size: xx-large; 
 }
 .about__description {
     display: flex;
     justify-content: center;
-    padding-top: 1px;
-    padding-bottom: 1px;   
+    padding-top: 0;
+    padding-bottom: 1px; 
+    font-size: 40px; 
+    font-style: bold;
+    color:rgb(17, 30, 108);
 }
 .about__image {
     width: 100%; 
-    height: 700px;
+    height: 500px;
 }
 .about__button {
-    color: white;
-    background-color: rgb(69, 140, 221);
+    color: rgb(17, 30, 108);
+    background-color: rgb(176, 196, 222);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 50px;
+    border-radius: 15px;
+    border-color: rgb(176, 196, 222);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.about__button:hover {
+    color: rgb(17, 30, 108);
+    font-size: 27px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.about__button:focus {
+    outline: none;
+    cursor: pointer;
+    color: rgb(17, 30, 108);
+    font-weight: bolder;
+    font-size: 27px;
+}
+.about__button:active {
+    color: rgb(17, 30, 108);
+    font-weight: bolder;
+    font-size: 27px;
+}
+.product__sale {
+    margin-left: 25px;
 }
 .product__discount-sale {
-    color: red;
-}
-.product__basket {
-    background-color: rgb(69, 140, 221);
     color: black;
-} 
+}
+.product__discount {
+    color:red;
+}
+.recommendations__item {
+    display: flex;
+    justify-content: space-between;
+}
+.profitably__item {
+    display: flex; 
+    justify-content: space-between;
+}
 .profitably__list {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 20px;   
+    padding-left: 0;
 } 
 .recommendations__list {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
-    padding-bottom: 20px;   
+    padding-bottom: 20px;  
+    padding-left: 0; 
 }
 .product__item {  
-    background-color: rgb(253, 253, 212);
-    color: black;    
+    background-color: rgb(243, 242, 242);
+    color: black;  
+    border-radius: 15px; 
     border-style: solid; 
     border-width: 1px; 
-    border-color: black;
+    border-color:white;
+    height: 450px;
+    width: 300px;
+    list-style-type: none;    
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.product__title {
+    margin-left: 20px;
+    margin-right: 20px;    
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.product__image {
+    width: 250px;
+    height: 250px;
+    display: block;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+.product__basket {
+    background-color: rgb(176, 196, 222);
+    border-color: rgb(176, 196, 222);
+    border-radius: 10px;
+    width: 200px;
+    height: 30px;
+    color: black;
+    display: block;
+    position: absolute;
+    left: 50px;
+    right: auto;
+    bottom: 10px; 
+}
+.product__basket:hover {
+    background-color: rgb(146, 175, 212);
+    border-color: rgb(146, 175, 212);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.product__basket:focus {
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(146, 175, 212);
+    border-color: rgb(146, 175, 212);
+}
+.product__basket:active {
+    background-color: rgb(146, 175, 212);
+    border-color: rgb(146, 175, 212);
 }

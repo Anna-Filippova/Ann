@@ -1,13 +1,45 @@
 .footer {
-    background-color: rgb(235, 235, 135);
+    background-color: rgb(192, 199, 207);
 }
+.footer__title {
+    color: rgb(17, 30, 108)
+}
+
 .footer__list {
     color: black;
+    padding: 0;
 }
 .footer {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 20px;   
-    color: black;
 } 
+.footer__part {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.footer__item-link {
+    color: black;
+    text-decoration: none;  
+}
+.footer__item-link:hover {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.footer__item-link:focus {
+    outline: none;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.footer__item-link:active {
+    font-weight: bolder;
+    font-size: 20px;
+}
+.footer__item {
+    list-style-type: none;
+}
+
