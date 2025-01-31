@@ -50,14 +50,17 @@
     font-weight: bolder;
     font-size: 27px;
 }
-.product__sale {
-    margin-left: 25px;
-}
 .product__discount-sale {
     color: black;
 }
 .product__discount {
     color:red;
+    font-weight: bold;
+    padding: 1px;
+}
+.profitably__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .recommendations__item {
     display: flex;
@@ -67,12 +70,16 @@
     display: flex; 
     justify-content: space-between;
 }
+.profitably__link {
+    margin-right: 20px;
+}
 .profitably__list {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 20px;   
     padding-left: 0;
+    flex-wrap: wrap;
 } 
 .recommendations__list {
     display: flex;
@@ -80,36 +87,62 @@
     padding-top: 20px;
     padding-bottom: 20px;  
     padding-left: 0; 
+    flex-wrap: wrap;
 }
 .product__item {  
-    background-color: rgb(243, 242, 242);
+    background-color: rgb(214, 214, 214);
     color: black;  
     border-radius: 15px; 
     border-style: solid; 
     border-width: 1px; 
     border-color:white;
-    height: 450px;
-    width: 300px;
+    height: 400px;
+    width: 250px;
     list-style-type: none;    
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    margin-top: 20px;
+}
+.product__sale {
+    margin-left: 25px;
+    font-size: 18px;
 }
 .product__title {
-    margin-left: 20px;
-    margin-right: 20px;    
+    margin-left: 21px;
+    margin-right: 21px;    
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; 
+    font-size: 15px;
+    position: absolute;
+    margin-top: 0;
 }
-.product__image {
-    width: 250px;
-    height: 250px;
+.product__wrapper{
+    width: 220px;
+    height: 220px;
     display: block;
-    border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.product__image {
+    width: 220px;
+    height: 220px;
+    display: block;
+    border-radius: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.product__discount{
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(255, 255, 153);
+    border-radius: 8px;
 }
 .product__basket {
     background-color: rgb(176, 196, 222);
@@ -120,9 +153,9 @@
     color: black;
     display: block;
     position: absolute;
-    left: 50px;
-    right: auto;
-    bottom: 10px; 
+    bottom: 15px; 
+    margin-left: 25px;
+    margin-right: auto;
 }
 .product__basket:hover {
     background-color: rgb(146, 175, 212);

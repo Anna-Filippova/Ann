@@ -1,0 +1,41 @@
+@media only screen and (max-width: 600px) {
+    /* body {
+        transform: scale(0.9);
+    }
+    .container {
+        flex-direction: column;
+    } */
+    .about__image {
+        height: auto;
+    }
+    .header__search {
+        transform: scale(0.5);
+        transform-origin: left;
+    }
+    .header__buttons {
+        transform: scale(0.5);
+    }
+    .header__item-link {
+        font-size: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        min-width: 100px;
+    }
+    .about__description {
+        font-size: 30px; 
+    }
+    .footer__item-link {
+        font-size: 20px;
+    }
+    .footer__part {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 200px;
+    }
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+}
