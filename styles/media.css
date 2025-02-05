@@ -9,11 +9,21 @@
         height: auto;
     }
     .header__search {
-        transform: scale(0.5);
-        transform-origin: left;
+        margin-left: 40px;
+        margin-right: auto;
+        height: 50px;
     }
-    .header__buttons {
-        transform: scale(0.5);
+    .search__field {
+        width: 200px;
+        height: 30px;
+        margin-top: 5px;
+        margin-left: 5px;
+        padding: 17px 40px 17px 20px;
+        font-size: 16px;
+    }
+    .search__submit {
+        max-width: 30px;
+        margin-top: 0;
     }
     .header__item-link {
         font-size: 20px;
@@ -36,6 +46,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+    .header__button-icon{
+        max-width: 30px;
+    }
+    .header__button-text{
+        font-size: 12px;
     }
 
 }
