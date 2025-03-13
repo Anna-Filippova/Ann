@@ -51,6 +51,9 @@
         <a class="profitably__link" href="#">Ещё</a>
       </div>
       <ul class="profitably__list product">
+        <button class="sliderLeft">
+          <img class="slider__image" src="images/left.png" alt="влево" width="30">
+        </button>
         <li class="product__item">
           <div class="product__wrapper">
             <img class="product__image" src="images/turtleneck.jpg" alt="водолазка" width="200">
@@ -62,6 +65,9 @@
           </p>
           <p class="product__title">Водолазка с высоким горлом</p>
           <button class="product__basket">В корзину</button>
+          <div class="product__basket-description" hidden>
+            <p>Добавить товар в корзину</p>
+          </div>
         </li>
         <li class="product__item">
           <div class="product__wrapper">
@@ -111,6 +117,9 @@
           <p class="product__title">Пуловер женский</p>
           <button class="product__basket">В корзину</button>
         </li>
+        <button class="sliderRight">
+          <img class="slider__image" src="images/right.png" alt="вправо" width="30">
+        </button>
       </ul>
     </section>
     <section class="section recommendations">
@@ -149,9 +158,9 @@
           <button class="product__basket">В корзину</button>
         </li>  
         <li class="product__item">
-          <img class="product__image" src="images/turtleneck.jpg" alt="брюки" width="200">
+          <img class="product__image" src="images/trousers.jpg" alt="брюки" width="200">
           <p class="product__sale"><b>2500 рублей</b></p>
-          <p class="product__title"><b>Брюки классические</b></p>
+          <p class="product__title">Брюки классические</p>
           <button class="product__basket">В корзину</button>
         </li>
         <li class="product__item">
@@ -246,6 +255,7 @@
       <button class="form__button">Зарегистрироваться</button>
     </form>
   </section>
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>

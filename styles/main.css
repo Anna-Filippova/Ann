@@ -80,6 +80,7 @@
     padding-bottom: 20px;   
     padding-left: 0;
     flex-wrap: wrap;
+    align-items: center;
 } 
 .recommendations__list {
     display: flex;
@@ -88,6 +89,17 @@
     padding-bottom: 20px;  
     padding-left: 0; 
     flex-wrap: wrap;
+}
+.sliderLeft {
+    background-color: white;
+    border: none;
+}
+.sliderRight {
+    background-color: white;
+    border: none;
+}
+.slider__image {
+    background-color: white;
 }
 .product__item {  
     background-color: rgb(214, 214, 214);
