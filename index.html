@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/normalize.css">
 </head>
-
 <body>
   <header class="header container">
     <h1 class="header__title">Wardrobe</h1>
@@ -48,12 +47,13 @@
     <section class="section profitably">
       <div class="profitably__item">
         <h2 class="profitably__title">Выгодно</h2>
-        <a class="profitably__link" href="#">Ещё</a>
       </div>
-      <ul class="profitably__list product">
-        <button class="sliderLeft">
+      <div class="slider">
+      <button class="sliderLeft">
           <img class="slider__image" src="images/left.png" alt="влево" width="30">
-        </button>
+      </button>
+    <div class="slider__wrap">
+      <ul class="profitably__list product">
         <li class="product__item">
           <div class="product__wrapper">
             <img class="product__image" src="images/turtleneck.jpg" alt="водолазка" width="200">
@@ -117,10 +117,60 @@
           <p class="product__title">Пуловер женский</p>
           <button class="product__basket">В корзину</button>
         </li>
-        <button class="sliderRight">
-          <img class="slider__image" src="images/right.png" alt="вправо" width="30">
-        </button>
+        <li class="product__item">
+          <div class="product__wrapper">
+            <img class="product__image" src="images/jeans.jpg" alt="джинсы" width="200">
+            <span class="product__discount">-15%</span>
+          </div>
+          <p class="product__sale">
+            <b class="product__discount-sale">1300 рублей</b>
+            <del class="product__del-sale"><small>1500 рублей</small></del>
+          </p>
+          <p class="product__title">Джинсы женские</p>
+          <button class="product__basket">В корзину</button>
+        </li>
+        <li class="product__item">
+          <div class="product__wrapper">
+            <img class="product__image" src="images/jacket.jpg" alt="пиджак" width="200">
+            <span class="product__discount">-20%</span>
+          </div>
+          <p class="product__sale">
+            <b class="product__discount-sale">1400 рублей</b>
+            <del class="product__del-sale"><small>1700 рублей</small></del>
+          </p>
+          <p class="product__title">Пиджак женский</p>
+          <button class="product__basket">В корзину</button>
+        </li>
+        <li class="product__item">
+          <div class="product__wrapper">
+            <img class="product__image" src="images/costume.webp" alt="костюм" width="200">
+            <span class="product__discount">-25%</span>
+          </div>
+          <p class="product__sale">
+            <b class="product__discount-sale">2400 рублей</b>
+            <del class="product__del-sale"><small>3200 рублей</small></del>
+          </p>
+          <p class="product__title">Твидовый костюм женский</p>
+          <button class="product__basket">В корзину</button>
+        </li>
+        <li class="product__item">
+          <div class="product__wrapper">
+            <img class="product__image" src="images/summercostume.jpg" alt="костюмлет" width="200">
+            <span class="product__discount">-20%</span>
+          </div>
+          <p class="product__sale">
+            <b class="product__discount-sale">2500 рублей</b>
+            <del class="product__del-sale"><small>2200 рублей</small></del>
+          </p>
+          <p class="product__title">Летний комплект женский</p>
+          <button class="product__basket">В корзину</button>
+        </li>
       </ul>
+    </div>
+      <button class="sliderRight">
+          <img class="slider__image" src="images/right.png" alt="вправо" width="30">
+      </button>
+      </div>
     </section>
     <section class="section recommendations">
       <div class="recommendations__item">
@@ -170,7 +220,7 @@
           <button class="product__basket">В корзину</button>
         </li>
         <li class="product__item">
-          <img class="product__image" src="images/Skirt.webp" alt="юбка" width="200">
+          <img class="product__image" src="images/skirt.webp" alt="юбка" width="200">
           <p class="product__sale"><b>2200 рублей</b></p>
           <p class="product__title">Юбка миди офисная</p>
           <button class="product__basket">В корзину</button>

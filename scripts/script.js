@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* Динамическое перелистывание карточек выгодных товаров */
 
-    const slider__left = document.querySelector('.slider__left');             // создаем переменную находя блок по классу
-    const slider__right = document.querySelector('.slider__left');
-    const cards = document.getElementById('profitably__list');
+    const sliderLeft = document.querySelector('.sliderLeft');             // создаем переменную находя блок по классу
+    const sliderRight = document.querySelector('.sliderRight');
+    const product = document.querySelector('.profitably__list');
     /*
 
        *   Алгоритм
@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
        *   3.2.1. Происходит листание карточек слева направо поочередно одна за другой 
        * 4. Конец
        * 
-       *   Блок-схема: /images/block-schema.png
+       *   Блок-схема: /images/block_schema.png
        */
-    if (slider__left) {                                                       // проверяем существование элемента в DOM
-        console.log('Константа slider__left существует');
-        slider__left.addEventListener('click', () => {
-            console.log('Кнопка нажимается');
+    if (sliderLeft) {                                                       // проверяем существование элемента в DOM
+        console.log('Константа sliderLeft существует');
+        sliderLeft.addEventListener('click', () => {
+            console.log('Кнопка sliderLeft нажимается');
             let left = product.style.getPropertyValue('left');
             if (left) {
                 left = left.replace('px', '');
@@ -34,19 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
             else {
                 left = 0;
             }
-            if (left<720)
+            if (left>=0)
             {
                 left = 0; 
             } else {
-                left = left + 720;
+                left = left + 360;
             }
             console.log('left', left + 'px')
+            product.style.setProperty('left', left + 'px');
+
         })
     }
-    if (slider__right) {                                                       // проверяем существование элемента в DOM
-        console.log('Константа slider__right существует');
-        slider__right.addEventListener('click', () => {
-            console.log('Кнопка нажимается');
+    if (sliderRight) {                                                       // проверяем существование элемента в DOM
+        console.log('Константа sliderRight существует');
+        sliderRight.addEventListener('click', () => {
+            console.log('Кнопка sliderRight нажимается');
             let width = 360*4;
             console.log('width' + width);
             /* let left = product.style.getPropertyValue('left);
@@ -67,11 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
             else {
                 left = 0;
             }
-            if (left >= width - 720)
+            if (left >= width - 360)
             {
-                left = width - 720;
+                left = width - 360;
             } else {
-                left = left - 720;
+                left = left - 360;
             }
             console.log('left' + left);
             product.style.setProperty('left', left + 'px');
