@@ -2,13 +2,13 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* Динамическое перелистывание карточек выгодных товаров */
+/* ДИНАМИЧЕСКОЕ ПЕРЕЛИСТЫВАНИЕ КАРТОЧЕК ВЫГОДНЫХ ТОВАРОВ */
 
     const sliderLeft = document.querySelector('.sliderLeft');             // создаем переменную находя блок по классу
     const sliderRight = document.querySelector('.sliderRight');
     const product = document.querySelector('.profitably__list');
-    /*
 
+    /*
        *   Алгоритм
        *
        * 1. Начало
@@ -81,4 +81,82 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
     console.log('Скрипт отработал корректно')
-});
+    });
+
+/* НАЗВАНИЯ ТОВАРОВ */
+
+    const profitably__list = document.querySelector(".product"); 
+    if (profitably__list) {
+        const dataProduct__title = [
+            "Водолазка",
+            "Рубашка",
+            "Сапоги",
+            "Свитшот",
+            "Кофта",
+            "Джинсы",
+            "Пиджак",
+            "Костюм",
+            "Комплект",
+        ];
+        const product__title =
+        profitably__list.querySelectorAll(".product__title");
+
+        product__title.forEach((item, index) => {
+
+            item.textContent = dataProduct__title[index];
+           });
+    }
+
+/* ФОРМЫ */
+
+/* ФОРМА ВХОДА */
+
+    const HeaderButton = document.querySelector('.header__button-login');
+    const FormWindow = document.querySelector('.form-enter');
+console.log(HeaderButton);
+console.log(FormWindow);
+    if (HeaderButton && FormWindow) {
+        HeaderButton.addEventListener("click", () => {
+            FormWindow.removeAttribute("hidden");
+        });
+    }
+
+    // Закрытие модального окна при клике вне его области
+    window.addEventListener("click", (event) => {
+        if (event.target === FormWindow) {
+            FormWindow.setAttribute("hidden", true);
+        }
+    });
+
+    // Закрытие модального окна при клике на кнопку закрытия
+    const closeEnter = document.querySelector (".form__close-enter");
+     
+    closeEnter.addEventListener("click", () => {
+        FormWindow.setAttribute("hidden", true);
+    });
+
+
+/* ФОРМА РЕГИСТРАЦИИ */
+    const registrationButton = document.querySelector('.form__link');
+    const registrationForm = document.querySelector('.form-registration');
+console.log(registrationButton);
+console.log(FormWindow);
+    if (registrationButton && registrationForm) {
+        registrationButton.addEventListener("click", () => {
+            registrationForm.removeAttribute("hidden");
+        });
+    }
+
+    // Закрытие модального окна при клике вне его области
+    window.addEventListener("click", (event) => {
+        if (event.target === registrationForm) {
+            registrationForm.setAttribute("hidden", true);
+        }
+    });
+
+    // Закрытие модального окна при клике на кнопку закрытия
+    const closeRegistration = document.querySelector (".form__close-registration");
+     
+    closeRegistration.addEventListener("click", () => {
+        registrationForm.setAttribute("hidden", true);
+    });

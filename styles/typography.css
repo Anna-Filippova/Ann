@@ -1,3 +1,54 @@
+.form__enter {
+    flex-direction: column;
+    display: flex;
+    background-color: rgb(157, 182, 216);
+    width: 400px;
+    height: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+    top: 300px;
+}
+.form__registration {
+    flex-direction: column;
+    display: flex;
+    background-color: rgb(157, 182, 216);
+    width: 400px;
+    height: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    position: relative;
+    top: 300px;
+}
+.form__title {
+    align-self: center; 
+    margin-bottom: 10px;
+}
+.form__item {
+    display: flex;
+    justify-content: space-between;
+}
+.form__button {
+    background-color: rgb(17, 30, 108);
+    border-color: rgb(17, 30, 108);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.form__separator {
+    margin-left: auto;
+    margin-right: auto;
+}
+.form__link {
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: rgb(17, 30, 108);
+}
 .form__button {
     background-color: rgb(69, 140, 221);   
     color: white;  
@@ -5,3 +56,43 @@
 .form__link {
     color: rgb(69, 140, 221);
 }
+.form__close-enter,
+.form__close-registration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgb(157, 182, 216);
+    border: none;
+}
+.form__close-enter:hover {
+    background-color: rgb(69, 140, 221);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.form__close-registration:hover {
+    background-color: rgb(69, 140, 221);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.form__close-enter:focus {
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(69, 140, 221);
+}
+.form__close-registration:focus {
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(69, 140, 221);
+}
+.form-enter,
+.form-registration {
+    content: "";
+    position: fixed;
+    background-color: rgba(190, 184, 177, 0.671);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
