@@ -160,3 +160,38 @@ console.log(FormWindow);
     closeRegistration.addEventListener("click", () => {
         registrationForm.setAttribute("hidden", true);
     });
+
+
+/* НАВИГАЦИОННОЕ МЕНЮ */
+    const headerMenu = document.querySelector('.header__menu');
+    if (headerMenu){
+        const headerList = headerMenu.querySelector('.header__list');
+        const menuData = {
+            link1: {
+                link: '#',
+                title: 'Одежда',
+            },
+            link2: {
+                link: '#',
+                title: 'Обувь',
+            },
+            link3: {
+                link: '#',
+                title: 'Аксессуары',
+            }
+        }
+        const createLink = (UrlLink, title) =>{
+            const link = `
+            <li class="header__item"><a href="${UrlLink}" class="header__item-link">${title}</a></li>
+            `;
+            return link;
+        }
+        for (const linkItem in menuData) {
+            const link = menuData[linkItem];
+            const linkIndex = createLink(link.UrlLink, link.title);
+            headerList.insertAdjacentHTML('beforeend', linkIndex);
+
+        }
+    console.log('Навигацинное меню создано с помощью javascript!');
+    }
+    
