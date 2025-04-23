@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-/* ДИНАМИЧЕСКОЕ ПЕРЕЛИСТЫВАНИЕ КАРТОЧЕК ВЫГОДНЫХ ТОВАРОВ */
+    /* ДИНАМИЧЕСКОЕ ПЕРЕЛИСТЫВАНИЕ КАРТОЧЕК ВЫГОДНЫХ ТОВАРОВ */
 
     const sliderLeft = document.querySelector('.sliderLeft');             // создаем переменную находя блок по классу
     const sliderRight = document.querySelector('.sliderRight');
@@ -22,226 +22,275 @@ document.addEventListener("DOMContentLoaded", () => {
        * 
        *   Блок-схема: /images/block_schema.png
        */
-    if (sliderLeft) {                                                       // проверяем существование элемента в DOM
-        console.log('Константа sliderLeft существует');
-        sliderLeft.addEventListener('click', () => {
-            console.log('Кнопка sliderLeft нажимается');
-            let left = product.style.getPropertyValue('left');
-            if (left) {
-                left = left.replace('px', '');
-                left = parseInt(left);
-            }
-            else {
-                left = 0;
-            }
-            if (left>=0)
-            {
-                left = 0; 
-            } else {
-                left = left + 360;
-            }
-            console.log('left', left + 'px')
-            product.style.setProperty('left', left + 'px');
+    // if (sliderLeft) {                                                       // проверяем существование элемента в DOM
+    //     console.log('Константа sliderLeft существует');
+    //     sliderLeft.addEventListener('click', () => {
+    //         console.log('Кнопка sliderLeft нажимается');
+    //         let left = product.style.getPropertyValue('left');
+    //         if (left) {
+    //             left = left.replace('px', '');
+    //             left = parseInt(left);
+    //         }
+    //         else {
+    //             left = 0;
+    //         }
+    //         if (left>=0)
+    //         {
+    //             left = 0; 
+    //         } else {
+    //             left = left + 360;
+    //         }
+    //         console.log('left', left + 'px')
+    //         product.style.setProperty('left', left + 'px');
 
-        })
-    }
-    if (sliderRight) {                                                       // проверяем существование элемента в DOM
-        console.log('Константа sliderRight существует');
-        sliderRight.addEventListener('click', () => {
-            console.log('Кнопка sliderRight нажимается');
-            let width = 360*4;
-            console.log('width' + width);
-            /* let left = product.style.getPropertyValue('left);
-            if (left) {
-                left = left.replace('px', '');
-            }
-            else {
-                left = 0;
-            }
-            left = parseInt(left) - 350;
-            console.log('left' + left);
-            product.style.setProperty ('left', left + 'px');*/
-            let left = product.style.getPropertyValue('left');
-            if (left) {
-                left = left.replace('px', '');
-                left = parseInt(left);
-            }
-            else {
-                left = 0;
-            }
-            if (left >= width - 360)
-            {
-                left = width - 360;
-            } else {
-                left = left - 360;
-            }
-            console.log('left' + left);
-            product.style.setProperty('left', left + 'px');
+    //     })
+    // }
+    // if (sliderRight) {                                                       // проверяем существование элемента в DOM
+    //     console.log('Константа sliderRight существует');
+    //     sliderRight.addEventListener('click', () => {
+    //         console.log('Кнопка sliderRight нажимается');
+    //         let width = 360*4;
+    //         console.log('width' + width);
+    //         /* let left = product.style.getPropertyValue('left);
+    //         if (left) {
+    //             left = left.replace('px', '');
+    //         }
+    //         else {
+    //             left = 0;
+    //         }
+    //         left = parseInt(left) - 350;
+    //         console.log('left' + left);
+    //         product.style.setProperty ('left', left + 'px');*/
+    //         let left = product.style.getPropertyValue('left');
+    //         if (left) {
+    //             left = left.replace('px', '');
+    //             left = parseInt(left);
+    //         }
+    //         else {
+    //             left = 0;
+    //         }
+    //         if (left >= width - 360)
+    //         {
+    //             left = width - 360;
+    //         } else {
+    //             left = left - 360;
+    //         }
+    //         console.log('left' + left);
+    //         product.style.setProperty('left', left + 'px');
 
-        })
-    }
-    console.log('Скрипт отработал корректно')
-    });
+    //     })
+    // }
+    // console.log('Скрипт отработал корректно')
+    // 
+});
 
 /* НАЗВАНИЯ ТОВАРОВ */
 
-    const profitably__list = document.querySelector(".product"); 
-    if (profitably__list) {
-        const dataProduct__title = [
-            "Водолазка",
-            "Рубашка",
-            "Сапоги",
-            "Свитшот",
-            "Кофта",
-            "Джинсы",
-            "Пиджак",
-            "Костюм",
-            "Комплект",
-        ];
-        const product__title =
+const profitably__list = document.querySelector(".product");
+if (profitably__list) {
+    const dataProduct__title = [
+        "Водолазка",
+        "Рубашка",
+        "Сапоги",
+        "Свитшот",
+        "Кофта",
+        "Джинсы",
+        "Пиджак",
+        "Костюм",
+        "Комплект",
+    ];
+    const product__title =
         profitably__list.querySelectorAll(".product__title");
 
-        product__title.forEach((item, index) => {
+    product__title.forEach((item, index) => {
 
-            item.textContent = dataProduct__title[index];
-           });
-    }
+        item.textContent = dataProduct__title[index];
+    });
+}
 
 /* ФОРМЫ */
 
 /* ФОРМА ВХОДА */
 
-    const HeaderButton = document.querySelector('.header__button-login');
-    const FormWindow = document.querySelector('.form-enter');
+const HeaderButton = document.querySelector('.header__button-login');
+const FormWindow = document.querySelector('.form-enter');
 console.log(HeaderButton);
 console.log(FormWindow);
-    if (HeaderButton && FormWindow) {
-        HeaderButton.addEventListener("click", () => {
-            FormWindow.removeAttribute("hidden");
-        });
-    }
-
-    // Закрытие модального окна при клике вне его области
-    window.addEventListener("click", (event) => {
-        if (event.target === FormWindow) {
-            FormWindow.setAttribute("hidden", true);
-        }
+if (HeaderButton && FormWindow) {
+    HeaderButton.addEventListener("click", () => {
+        FormWindow.removeAttribute("hidden");
     });
+}
 
-    // Закрытие модального окна при клике на кнопку закрытия
-    const closeEnter = document.querySelector (".form__close-enter");
-     
-    closeEnter.addEventListener("click", () => {
+// Закрытие модального окна при клике вне его области
+window.addEventListener("click", (event) => {
+    if (event.target === FormWindow) {
         FormWindow.setAttribute("hidden", true);
-    });
+    }
+});
+
+// Закрытие модального окна при клике на кнопку закрытия
+const closeEnter = document.querySelector(".form__close-enter");
+
+closeEnter.addEventListener("click", () => {
+    FormWindow.setAttribute("hidden", true);
+});
 
 
 /* ФОРМА РЕГИСТРАЦИИ */
 
-    const registrationButton = document.querySelector('.form__link');
-    const registrationForm = document.querySelector('.form-registration');
+const registrationButton = document.querySelector('.form__link');
+const registrationForm = document.querySelector('.form-registration');
 console.log(registrationButton);
 console.log(FormWindow);
-    if (registrationButton && registrationForm) {
-        registrationButton.addEventListener("click", () => {
-            registrationForm.removeAttribute("hidden");
-        });
+if (registrationButton && registrationForm) {
+    registrationButton.addEventListener("click", () => {
+        registrationForm.removeAttribute("hidden");
+    });
+}
+
+// Закрытие модального окна при клике вне его области
+window.addEventListener("click", (event) => {
+    if (event.target === registrationForm) {
+        registrationForm.setAttribute("hidden", true);
+    }
+});
+
+// Закрытие модального окна при клике на кнопку закрытия
+const closeRegistration = document.querySelector(".form__close-registration");
+
+closeRegistration.addEventListener("click", () => {
+    registrationForm.setAttribute("hidden", true);
+});
+
+
+/* ОТПРАВКА ДАННЫХ НА ФОРМЕ РЕГИСТРАЦИИ */
+
+registrationForm.addEventListener('submit', event => {
+    event.preventDefault();
+
+    const surname = registrationForm.querySelector('#surname').value;
+    const name = registrationForm.querySelector('#name').value;
+    const email = registrationForm.querySelector('#email').value;
+    const phone = registrationForm.querySelector('#phone').value;
+
+    const errorMessage = registrationForm.querySelector('#error-message');
+
+    if (name.length < 2) {
+        errorMessage.textContent = 'Имя должно содержать не менее 2 символов';
+        return;
     }
 
-    // Закрытие модального окна при клике вне его области
-    window.addEventListener("click", (event) => {
-        if (event.target === registrationForm) {
-            registrationForm.setAttribute("hidden", true);
-        }
-    });
+    errorMessage.textContent = 'Регистрация прошла успешно!';
+    errorMessage.style.color = 'green';
 
-    // Закрытие модального окна при клике на кнопку закрытия
-    const closeRegistration = document.querySelector (".form__close-registration");
-     
-    closeRegistration.addEventListener("click", () => {
-        registrationForm.setAttribute("hidden", true);
-    });
+    window.localStorage.setItem("phone", phone);
+
+    document.getElementById('form-registration').reset();
+});
 
 
 /* НАВИГАЦИОННОЕ МЕНЮ */
 
-    const headerMenu = document.querySelector('.header__menu');
-    if (headerMenu){
-        const headerList = headerMenu.querySelector('.header__list');
-        const menuData = {
-            link1: {
-                link: '#',
-                title: 'Одежда',
-            },
-            link2: {
-                link: '#',
-                title: 'Обувь',
-            },
-            link3: {
-                link: '#',
-                title: 'Аксессуары',
-            }
+const headerMenu = document.querySelector('.header__menu');
+if (headerMenu) {
+    const headerList = headerMenu.querySelector('.header__list');
+    const menuData = {
+        link1: {
+            link: '#',
+            title: 'Одежда',
+        },
+        link2: {
+            link: '#',
+            title: 'Обувь',
+        },
+        link3: {
+            link: '#',
+            title: 'Аксессуары',
         }
-        const createLink = (UrlLink, title) =>{
-            const link = `
+    }
+    const createLink = (UrlLink, title) => {
+        const link = `
             <li class="header__item"><a href="${UrlLink}" class="header__item-link">${title}</a></li>
             `;
-            return link;
-        }
-        for (const linkItem in menuData) {
-            const link = menuData[linkItem];
-            const linkIndex = createLink(link.UrlLink, link.title);
-            headerList.insertAdjacentHTML('beforeend', linkIndex);
-
-        }
-    console.log('Навигацинное меню создано с помощью javascript!');
+        return link;
     }
-    
+    for (const linkItem in menuData) {
+        const link = menuData[linkItem];
+        const linkIndex = createLink(link.UrlLink, link.title);
+        headerList.insertAdjacentHTML('beforeend', linkIndex);
 
-    /* ЗАДАНИЕ 6 */
+    }
+    console.log('Навигацинное меню создано с помощью javascript!');
+}
 
-    const menuContainer = document.querySelector('#menu');
-    if (menuContainer) {
-        const menuList = menuContainer.querySelector('.header__list');
-        const apiUrl = 'data.json';
-        const createItem = (linkUrl, title) => {
-            
-            const item = `
+
+/* ЗАДАНИЕ 6 */
+
+const menuContainer = document.querySelector('#menu');
+if (menuContainer) {
+    const menuList = menuContainer.querySelector('.header__list');
+    const apiUrl = 'data.json';
+    const createItem = (linkUrl, title) => {
+
+        const item = `
                      <li class="header__item"><a class="header__item-link" href="${linkUrl}">${title}</a></li>
             `;
-            return item;
-        }
+        return item;
+    }
 
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                console.log(typeof (data));
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(typeof (data));
 
-                data.forEach(item => {
-                    const headerItem = createItem(item.link, item.title);
-                    menuList.insertAdjacentHTML('beforeend', headerItem);
-                });
-            })
-            .catch(error => {
-                console.error('Ошибка при загрузке данных:', error);
+            data.forEach(item => {
+                const headerItem = createItem(item.link, item.title);
+                menuList.insertAdjacentHTML('beforeend', headerItem);
             });
-    }
+        })
+        .catch(error => {
+            console.error('Ошибка при загрузке данных:', error);
+        });
+}
 
 
-    /* ПРЕДЗАГРУЗЧИК */
-    const preloader = document.querySelector(".preloader");
-    const content = document.querySelector(".content");
-    if (preloader && content) {
-        setTimeout(() => {
+/* ПРЕДЗАГРУЗЧИК */
 
-            preloader.style.opacity = "0";
-            preloader.style.visibility = "hidden";
+const preloader = document.querySelector(".preloader");
+const content = document.querySelector(".content");
+if (preloader && content) {
+    setTimeout(() => {
 
-            content.style.display = "block";
+        preloader.style.opacity = "0";
+        preloader.style.visibility = "hidden";
 
-            preloader.remove();
-        }, 3000);
-    }
+        content.style.display = "block";
 
-    
+        preloader.remove();
+    }, 3000);
+}
+
+
+/* SWIPER */
+
+const slider = document.querySelector('.swiper');
+
+if (slider) {
+    const swiper = new Swiper(slider, {
+
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+}

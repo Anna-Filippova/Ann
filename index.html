@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/normalize.css">
+
 </head>
 
 <body>
@@ -19,310 +21,310 @@
     Загрузка...
   </div>
   <div class="content">
-  <header class="header container">
-    <h1 class="header__title">Wardrobe</h1>
-    <form class="header__search search" action="/" method="get">
-      <input class="search__field" type="search" name="text" placeholder="Введите название товара">
-      <button class="search__submit" type="submit">
-        <img class="search__button-icon" src="images/field.png" alt="Поиск" width="42" height="42">
-      </button>
-    </form>
-    <div class="header__buttons">
-      <button class="header__button" type="button">
-        <img class="header__button-icon" src="images/cart.svg" alt="Корзина" width="47" height="47">
-        <span class="header__button-text">Корзина</span>
-      </button>
-      <button class="header__button header__button-login" type="button">
-        <img class="header__button-icon" src="images/user.png" alt="Вход" width="47" height="47">
-        <span class="header__button-text">Вход</span>
-      </button>
-    </div>
-    <nav class="header__menu">
-      <ul class="header__list">
-        <!-- <li class="header__item"><a class="header__item-link" href="#">Одежда</a></li>
+    <header class="header container">
+      <h1 class="header__title">Wardrobe</h1>
+      <form class="header__search search" action="/" method="get">
+        <input class="search__field" type="search" name="text" placeholder="Введите название товара">
+        <button class="search__submit" type="submit">
+          <img class="search__button-icon" src="images/field.png" alt="Поиск" width="42" height="42">
+        </button>
+      </form>
+      <div class="header__buttons">
+        <button class="header__button" type="button">
+          <img class="header__button-icon" src="images/cart.svg" alt="Корзина" width="47" height="47">
+          <span class="header__button-text">Корзина</span>
+        </button>
+        <button class="header__button header__button-login" type="button">
+          <img class="header__button-icon" src="images/user.png" alt="Вход" width="47" height="47">
+          <span class="header__button-text">Вход</span>
+        </button>
+      </div>
+      <nav class="header__menu">
+        <ul class="header__list">
+          <!-- <li class="header__item"><a class="header__item-link" href="#">Одежда</a></li>
         <li class="header__item"><a class="header__item-link" href="#">Обувь</a></li>
         <li class="header__item"><a class="header__item-link" href="#">Аксессуары</a></li> -->
-      </ul>
-    </nav>
-  </header>
-  <main class="main container">
-    <section class="section about">
-      <div class="about__content">
-        <p class="about__description">Твои любимые бренды по низким ценам!</p>
-        <h2 class="about__title">Сезонное предложение</h2>
-        <img class="about__image" src="images/image.png" alt="одежда" width="600">
-        <button class="about__button">К покупкам!</button>
-      </div>
-    </section>
-    <section class="section profitably">
-      <div class="profitably__item">
-        <h2 class="profitably__title">Выгодно</h2>
-      </div>
-      <div class="slider">
-        <button class="sliderLeft">
-          <img class="slider__image" src="images/left.png" alt="влево" width="30">
-        </button>
-        <div class="slider__wrap">
-          <ul class="profitably__list product">
-            <li class="product__item">
-              <div class="product__wrapper">
-                <img class="product__image" src="images/turtleneck.jpg" alt="водолазка" width="200">
-                <span class="product__discount">-20%</span>
-              </div>
-              <p class="product__sale">
-                <b class="product__discount-sale">800 рублей</b>
-                <del class="product__del-sale"><small>990 рублей</small></del>
-              </p>
-              <p class="product__title">Товар 1</p>
-              <button class="product__basket">В корзину</button>
-              <div class="product__basket-description" hidden>
-                <p>Добавить товар в корзину</p>
-              </div>
-            </li>
-            <li class="product__item">
-              <div class="product__wrapper">
-                <img class="product__image" src="images/shirt.webp" alt="рубашка" width="200">
-                <span class="product__discount">-15%</span>
-              </div>
-              <p class="product__sale">
-                <b class="product__discount-sale">1500 рублей</b>
-                <del class="product__del-sale"><small>1800 рублей</small></del>
-              </p>
-              <p class="product__title">Товар 2</p>
-              <button class="product__basket">В корзину</button>
-            </li>
-            <li class="product__item">
-              <div class="product__wrapper">
-                <img class="product__image" src="images/boots.jpg" alt="сапоги" width="200">
-                <span class="product__discount">-20%</span>
-              </div>
-              <p class="product__sale">
-                <b class="product__discount-sale">3600 рублей</b>
-                <del class="product__del-sale"><small>4500 рублей</small></del>
-              </p>
-              <p class="product__title">Товар 3</p>
-              <button class="product__basket">В корзину</button>
-            </li>
-            <li class="product__item">
-              <div class="product__wrapper">
-                <img class="product__image" src="images/sweatshirt.jpg" alt="свитшот" width="200">
-                <span class="product__discount">-30%</span>
-              </div>
-              <p class="product__sale">
-                <b class="product__discount-sale">1200 рублей</b>
-                <del class="product__del-sale"><small>1600 рублей</small></del>
-              </p>
-              <p class="product__title">Товар 4</p>
-              <button class="product__basket">В корзину</button>
-            </li>
-            <li class="product__item">
-              <div class="product__wrapper">
-                <img class="product__image" src="images/pulover.jpg" alt="пуловер" width="200">
-                <span class="product__discount">-25%</span>
-              </div>
-              <p class="product__sale">
-                <b class="product__discount-sale">1500 рублей</b>
-                <del class="product__del-sale"><small>1800 рублей</small></del>
-              </p>
-              <p class="product__title">Товар 5</p>
-              <button class="product__basket">В корзину</button>
-            </li>
-            <li class="product__item">
-              <div class="product__wrapper">
-                <img class="product__image" src="images/jeans.jpg" alt="джинсы" width="200">
-                <span class="product__discount">-15%</span>
-              </div>
-              <p class="product__sale">
-                <b class="product__discount-sale">1300 рублей</b>
-                <del class="product__del-sale"><small>1500 рублей</small></del>
-              </p>
-              <p class="product__title">Товар 6</p>
-              <button class="product__basket">В корзину</button>
-            </li>
-            <li class="product__item">
-              <div class="product__wrapper">
-                <img class="product__image" src="images/jacket.jpg" alt="пиджак" width="200">
-                <span class="product__discount">-20%</span>
-              </div>
-              <p class="product__sale">
-                <b class="product__discount-sale">1400 рублей</b>
-                <del class="product__del-sale"><small>1700 рублей</small></del>
-              </p>
-              <p class="product__title">Товар 7</p>
-              <button class="product__basket">В корзину</button>
-            </li>
-            <li class="product__item">
-              <div class="product__wrapper">
-                <img class="product__image" src="images/costume.webp" alt="костюм" width="200">
-                <span class="product__discount">-25%</span>
-              </div>
-              <p class="product__sale">
-                <b class="product__discount-sale">2400 рублей</b>
-                <del class="product__del-sale"><small>3200 рублей</small></del>
-              </p>
-              <p class="product__title">Товар 8</p>
-              <button class="product__basket">В корзину</button>
-            </li>
-            <li class="product__item">
-              <div class="product__wrapper">
-                <img class="product__image" src="images/summercostume.jpg" alt="костюмлет" width="200">
-                <span class="product__discount">-20%</span>
-              </div>
-              <p class="product__sale">
-                <b class="product__discount-sale">2500 рублей</b>
-                <del class="product__del-sale"><small>2200 рублей</small></del>
-              </p>
-              <p class="product__title">Товар 9</p>
-              <button class="product__basket">В корзину</button>
-            </li>
-          </ul>
+        </ul>
+      </nav>
+    </header>
+    <main class="main container">
+      <section class="section about">
+        <div class="about__content">
+          <p class="about__description">Твои любимые бренды по низким ценам!</p>
+          <h2 class="about__title">Сезонное предложение</h2>
+          <img class="about__image" src="images/image.png" alt="одежда" width="600">
+          <button class="about__button">К покупкам!</button>
         </div>
-        <button class="sliderRight">
-          <img class="slider__image" src="images/right.png" alt="вправо" width="30">
+      </section>
+      <section class="section profitably--slider">
+        <div class="profitably__item">
+          <h2 class="profitably__title">Выгодно</h2>
+        </div>
+        <div class="slider--slider ">
+          <div class="slider__wrap swiper">
+            <ul class="profitably__list product swiper-wrapper">
+              <li class="product__item swiper-slide">
+                <div class="product__wrapper">
+                  <img class="product__image" src="images/turtleneck.jpg" alt="водолазка" width="200">
+                  <span class="product__discount">-20%</span>
+                </div>
+                <p class="product__sale">
+                  <b class="product__discount-sale">800 рублей</b>
+                  <del class="product__del-sale"><small>990 рублей</small></del>
+                </p>
+                <p class="product__title">Товар 1</p>
+                <button class="product__basket">В корзину</button>
+                <div class="product__basket-description" hidden>
+                  <p>Добавить товар в корзину</p>
+                </div>
+              </li>
+              <li class="product__item swiper-slide">
+                <div class="product__wrapper">
+                  <img class="product__image" src="images/shirt.webp" alt="рубашка" width="200">
+                  <span class="product__discount">-15%</span>
+                </div>
+                <p class="product__sale">
+                  <b class="product__discount-sale">1500 рублей</b>
+                  <del class="product__del-sale"><small>1800 рублей</small></del>
+                </p>
+                <p class="product__title">Товар 2</p>
+                <button class="product__basket">В корзину</button>
+              </li>
+              <li class="product__item swiper-slide">
+                <div class="product__wrapper">
+                  <img class="product__image" src="images/boots.jpg" alt="сапоги" width="200">
+                  <span class="product__discount">-20%</span>
+                </div>
+                <p class="product__sale">
+                  <b class="product__discount-sale">3600 рублей</b>
+                  <del class="product__del-sale"><small>4500 рублей</small></del>
+                </p>
+                <p class="product__title">Товар 3</p>
+                <button class="product__basket">В корзину</button>
+              </li>
+              <li class="product__item swiper-slide">
+                <div class="product__wrapper">
+                  <img class="product__image" src="images/sweatshirt.jpg" alt="свитшот" width="200">
+                  <span class="product__discount">-30%</span>
+                </div>
+                <p class="product__sale">
+                  <b class="product__discount-sale">1200 рублей</b>
+                  <del class="product__del-sale"><small>1600 рублей</small></del>
+                </p>
+                <p class="product__title">Товар 4</p>
+                <button class="product__basket">В корзину</button>
+              </li>
+              <li class="product__item swiper-slide">
+                <div class="product__wrapper">
+                  <img class="product__image" src="images/pulover.jpg" alt="пуловер" width="200">
+                  <span class="product__discount">-25%</span>
+                </div>
+                <p class="product__sale">
+                  <b class="product__discount-sale">1500 рублей</b>
+                  <del class="product__del-sale"><small>1800 рублей</small></del>
+                </p>
+                <p class="product__title">Товар 5</p>
+                <button class="product__basket">В корзину</button>
+              </li>
+              <li class="product__item swiper-slide">
+                <div class="product__wrapper">
+                  <img class="product__image" src="images/jeans.jpg" alt="джинсы" width="200">
+                  <span class="product__discount">-15%</span>
+                </div>
+                <p class="product__sale">
+                  <b class="product__discount-sale">1300 рублей</b>
+                  <del class="product__del-sale"><small>1500 рублей</small></del>
+                </p>
+                <p class="product__title">Товар 6</p>
+                <button class="product__basket">В корзину</button>
+              </li>
+              <li class="product__item swiper-slide">
+                <div class="product__wrapper">
+                  <img class="product__image" src="images/jacket.jpg" alt="пиджак" width="200">
+                  <span class="product__discount">-20%</span>
+                </div>
+                <p class="product__sale">
+                  <b class="product__discount-sale">1400 рублей</b>
+                  <del class="product__del-sale"><small>1700 рублей</small></del>
+                </p>
+                <p class="product__title">Товар 7</p>
+                <button class="product__basket">В корзину</button>
+              </li>
+              <li class="product__item swiper-slide">
+                <div class="product__wrapper">
+                  <img class="product__image" src="images/costume.webp" alt="костюм" width="200">
+                  <span class="product__discount">-25%</span>
+                </div>
+                <p class="product__sale">
+                  <b class="product__discount-sale">2400 рублей</b>
+                  <del class="product__del-sale"><small>3200 рублей</small></del>
+                </p>
+                <p class="product__title">Товар 8</p>
+                <button class="product__basket">В корзину</button>
+              </li>
+              <li class="product__item swiper-slide">
+                <div class="product__wrapper">
+                  <img class="product__image" src="images/summercostume.jpg" alt="костюмлет" width="200">
+                  <span class="product__discount">-20%</span>
+                </div>
+                <p class="product__sale">
+                  <b class="product__discount-sale">2500 рублей</b>
+                  <del class="product__del-sale"><small>2200 рублей</small></del>
+                </p>
+                <p class="product__title">Товар 9</p>
+                <button class="product__basket">В корзину</button>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section recommendations">
+        <div class="recommendations__item">
+          <h2 class="recommendations__title">Рекомендуем</h2>
+        </div>
+        <ul class="recommendations__list product">
+          <li class="product__item">
+            <img class="product__image" src="images/t-shirt.jpg" alt="футболка" width="200">
+            <p class="product__sale"><b>450 рублей</b></p>
+            <p class="product__title">Футболка базовая</p>
+            <button class="product__basket">В корзину</button>
+          </li>
+          <li class="product__item">
+            <img class="product__image" src="images/sweatpants.webp" alt="штаны" width="200">
+            <p class="product__sale"><b>990 рублей</b></p>
+            <p class="product__title">Спортивные штаны</p>
+            <button class="product__basket">В корзину</button>
+          </li>
+          <li class="product__item">
+            <img class="product__image" src="images/hoodie.jpg" alt="худи" width="200">
+            <p class="product__sale"><b>1200 рублей</b></p>
+            <p class="product__title">Худи оверсайз</p>
+            <button class="product__basket">В корзину</button>
+          </li>
+          <li class="product__item">
+            <img class="product__image" src="images/rashguard.webp" alt="рашгард" width="200">
+            <p class="product__sale"><b>1300 рублей</b></p>
+            <p class="product__title">Рашгард</p>
+            <button class="product__basket">В корзину</button>
+          </li>
+          <li class="product__item">
+            <img class="product__image" src="images/shirtb.jpeg" alt="черная рубашка" width="200">
+            <p class="product__sale"><b>1200 рублей</b></p>
+            <p class="product__title">Рубашка черная</p>
+            <button class="product__basket">В корзину</button>
+          </li>
+          <li class="product__item">
+            <img class="product__image" src="images/trousers.jpg" alt="брюки" width="200">
+            <p class="product__sale"><b>2500 рублей</b></p>
+            <p class="product__title">Брюки классические</p>
+            <button class="product__basket">В корзину</button>
+          </li>
+          <li class="product__item">
+            <img class="product__image" src="images/polo.jpg" alt="поло" width="200">
+            <p class="product__sale"><b>1800 рублей</b></p>
+            <p class="product__title">Кофта поло с замком женская</p>
+            <button class="product__basket">В корзину</button>
+          </li>
+          <li class="product__item">
+            <img class="product__image" src="images/skirt.webp" alt="юбка" width="200">
+            <p class="product__sale"><b>2200 рублей</b></p>
+            <p class="product__title">Юбка миди офисная</p>
+            <button class="product__basket">В корзину</button>
+          </li>
+          <li class="product__item">
+            <img class="product__image" src="images/kid.webp" alt="костюм" width="200">
+            <p class="product__sale"><b>1950 рублей</b></p>
+            <p class="product__title">Костюм детский</p>
+            <button class="product__basket">В корзину</button>
+          </li>
+          <li class="product__item">
+            <img class="product__image" src="images/men.jpg" alt="кофта" width="200">
+            <p class="product__sale"><b>2400 рублей</b></p>
+            <p class="product__title">Кофта мужская</p>
+            <button class="product__basket">В корзину</button>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer container">
+      <div class="footer__part">
+        <h2 class="footer__title">Разработчик</h2>
+        <p class="footer__object">Филиппова Анна ЭК-31</p>
+        <p class="footer__copyright">© Все права защищены</p>
+      </div>
+      <div class="footer__part">
+        <h2 class="footer__title">Помощь</h2>
+        <ul class="footer__list">
+          <li class="footer__item"><a class="footer__item-link" href="#">Оформление заказа</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Оплата товаров</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Доставка</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Адреса ПВЗ</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Возврат товара</a></li>
+        </ul>
+      </div>
+      <div class="footer__part">
+        <h2 class="footer__title">Продавцам</h2>
+        <ul class="footer__list">
+          <li class="footer__item"><a class="footer__item-link" href="#">Начать продавать</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Открыть пункт выдачи</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Транспортировка</a></li>
+        </ul>
+      </div>
+      <div class="footer__part">
+        <h2 class="footer__title">Компания</h2>
+        <ul class="footer__list">
+          <li class="footer__item"><a class="footer__item-link" href="#">О нас</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Контакты</a></li>
+          <li class="footer__item"><a class="footer__item-link" href="#">Адреса</a></li>
+        </ul>
+      </div>
+    </footer>
+    <section class="section-form form-enter" hidden>
+      <form class="form__enter" action="/">
+        <button class="form__close-enter" type="button">
+          <img class="form__button-icon" src="images/close.png" alt="Закрыть" width="30" height="30">
         </button>
-      </div>
-    </section>
-    <section class="section recommendations">
-      <div class="recommendations__item">
-        <h2 class="recommendations__title">Рекомендуем</h2>
-      </div>
-      <ul class="recommendations__list product">
-        <li class="product__item">
-          <img class="product__image" src="images/t-shirt.jpg" alt="футболка" width="200">
-          <p class="product__sale"><b>450 рублей</b></p>
-          <p class="product__title">Футболка базовая</p>
-          <button class="product__basket">В корзину</button>
-        </li>
-        <li class="product__item">
-          <img class="product__image" src="images/sweatpants.webp" alt="штаны" width="200">
-          <p class="product__sale"><b>990 рублей</b></p>
-          <p class="product__title">Спортивные штаны</p>
-          <button class="product__basket">В корзину</button>
-        </li>
-        <li class="product__item">
-          <img class="product__image" src="images/hoodie.jpg" alt="худи" width="200">
-          <p class="product__sale"><b>1200 рублей</b></p>
-          <p class="product__title">Худи оверсайз</p>
-          <button class="product__basket">В корзину</button>
-        </li>
-        <li class="product__item">
-          <img class="product__image" src="images/rashguard.webp" alt="рашгард" width="200">
-          <p class="product__sale"><b>1300 рублей</b></p>
-          <p class="product__title">Рашгард</p>
-          <button class="product__basket">В корзину</button>
-        </li>
-        <li class="product__item">
-          <img class="product__image" src="images/shirtb.jpeg" alt="черная рубашка" width="200">
-          <p class="product__sale"><b>1200 рублей</b></p>
-          <p class="product__title">Рубашка черная</p>
-          <button class="product__basket">В корзину</button>
-        </li>
-        <li class="product__item">
-          <img class="product__image" src="images/trousers.jpg" alt="брюки" width="200">
-          <p class="product__sale"><b>2500 рублей</b></p>
-          <p class="product__title">Брюки классические</p>
-          <button class="product__basket">В корзину</button>
-        </li>
-        <li class="product__item">
-          <img class="product__image" src="images/polo.jpg" alt="поло" width="200">
-          <p class="product__sale"><b>1800 рублей</b></p>
-          <p class="product__title">Кофта поло с замком женская</p>
-          <button class="product__basket">В корзину</button>
-        </li>
-        <li class="product__item">
-          <img class="product__image" src="images/skirt.webp" alt="юбка" width="200">
-          <p class="product__sale"><b>2200 рублей</b></p>
-          <p class="product__title">Юбка миди офисная</p>
-          <button class="product__basket">В корзину</button>
-        </li>
-        <li class="product__item">
-          <img class="product__image" src="images/kid.webp" alt="костюм" width="200">
-          <p class="product__sale"><b>1950 рублей</b></p>
-          <p class="product__title">Костюм детский</p>
-          <button class="product__basket">В корзину</button>
-        </li>
-        <li class="product__item">
-          <img class="product__image" src="images/men.jpg" alt="кофта" width="200">
-          <p class="product__sale"><b>2400 рублей</b></p>
-          <p class="product__title">Кофта мужская</p>
-          <button class="product__basket">В корзину</button>
-        </li>
-      </ul>
-    </section>
-  </main>
-  <footer class="footer container">
-    <div class="footer__part">
-      <h2 class="footer__title">Разработчик</h2>
-      <p class="footer__object">Филиппова Анна ЭК-31</p>
-      <p class="footer__copyright">© Все права защищены</p>
-    </div>
-    <div class="footer__part">
-      <h2 class="footer__title">Помощь</h2>
-      <ul class="footer__list">
-        <li class="footer__item"><a class="footer__item-link" href="#">Оформление заказа</a></li>
-        <li class="footer__item"><a class="footer__item-link" href="#">Оплата товаров</a></li>
-        <li class="footer__item"><a class="footer__item-link" href="#">Доставка</a></li>
-        <li class="footer__item"><a class="footer__item-link" href="#">Адреса ПВЗ</a></li>
-        <li class="footer__item"><a class="footer__item-link" href="#">Возврат товара</a></li>
-      </ul>
-    </div>
-    <div class="footer__part">
-      <h2 class="footer__title">Продавцам</h2>
-      <ul class="footer__list">
-        <li class="footer__item"><a class="footer__item-link" href="#">Начать продавать</a></li>
-        <li class="footer__item"><a class="footer__item-link" href="#">Открыть пункт выдачи</a></li>
-        <li class="footer__item"><a class="footer__item-link" href="#">Транспортировка</a></li>
-      </ul>
-    </div>
-    <div class="footer__part">
-      <h2 class="footer__title">Компания</h2>
-      <ul class="footer__list">
-        <li class="footer__item"><a class="footer__item-link" href="#">О нас</a></li>
-        <li class="footer__item"><a class="footer__item-link" href="#">Контакты</a></li>
-        <li class="footer__item"><a class="footer__item-link" href="#">Адреса</a></li>
-      </ul>
-    </div>
-  </footer>
-  <section class="section-form form-enter" hidden>
-    <form class="form__enter" action="/">
-      <button class="form__close-enter" type="button">
-        <img class="form__button-icon" src="images/close.png" alt="Закрыть" width="30" height="30">
-      </button>
-      <h2 class="form__title">Вход</h2>
-      <input class="form__input" type="tel" name="phone" placeholder="Введите номер телефона" required>
-      <button class="form__button">Войти</button>
-      <p class="form__separator">ИЛИ</p>
-      <a class="form__link" href="#">Регистрация</a>
-    </form>
-  </section>
-  <section class="section-form form-registration" hidden>
-    <form class="form__registration" action="/">
-      <button class="form__close-registration" type="button">
-        <img class="form__button-icon" src="images/close.png" alt="Закрыть" width="30" height="30">
-      </button>
-      <h2 class="form__title">Регистрация</h2>
-      <p class="form__desk">Введите ваши данные</p>
-      <div class="form__item">
-        <label class="form__lable">Фамилия</label>
-        <input class="form__input" type="text" name="name" placeholder="Введите фамилию" required>
-      </div>
-      <div class="form__item">
-        <label class="form__lable">Имя</label>
-        <input class="form__input" type="text" name="surname" placeholder="Введите имя" required>
-      </div>
-      <div class="form__item">
-        <label class="form__lable">Почта</label>
-        <input class="form__input" type="email" name="email" placeholder="Введите почту" required>
-      </div>
-      <div class="form__item">
-        <label class="form__lable">Номер телефона</label>
+        <h2 class="form__title">Вход</h2>
         <input class="form__input" type="tel" name="phone" placeholder="Введите номер телефона" required>
-      </div>
-      <button class="form__button">Зарегистрироваться</button>
-    </form>
-  </section>
+        <button class="form__button">Войти</button>
+        <p class="form__separator">ИЛИ</p>
+        <a class="form__link" href="#">Регистрация</a>
+      </form>
+    </section>
+    <section class="section-form form-registration" hidden>
+      <form class="form__registration" action="/">
+        <button class="form__close-registration" type="button">
+          <img class="form__button-icon" src="images/close.png" alt="Закрыть" width="30" height="30">
+        </button>
+        <h2 class="form__title">Регистрация</h2>
+        <p class="form__desk">Введите ваши данные</p>
+        <div class="form__item">
+          <label class="form__lable">Фамилия</label>
+          <input class="form__input" type="text" name="name" placeholder="Введите фамилию" required>
+        </div>
+        <div class="form__item">
+          <label class="form__lable">Имя</label>
+          <input class="form__input" type="text" name="surname" placeholder="Введите имя" required>
+        </div>
+        <div class="form__item">
+          <label class="form__lable">Почта</label>
+          <input class="form__input" type="email" name="email" placeholder="Введите почту" required>
+        </div>
+        <div class="form__item">
+          <label class="form__lable">Номер телефона</label>
+          <input class="form__input" type="tel" name="phone" placeholder="Введите номер телефона" required>
+        </div>
+        <button class="form__button">Зарегистрироваться</button>
+      </form>
+    </section>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="scripts/script.js"></script>
+
 </body>
 
 </html>
