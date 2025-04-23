@@ -137,6 +137,7 @@ console.log(FormWindow);
 
 
 /* ФОРМА РЕГИСТРАЦИИ */
+
     const registrationButton = document.querySelector('.form__link');
     const registrationForm = document.querySelector('.form-registration');
 console.log(registrationButton);
@@ -163,6 +164,7 @@ console.log(FormWindow);
 
 
 /* НАВИГАЦИОННОЕ МЕНЮ */
+
     const headerMenu = document.querySelector('.header__menu');
     if (headerMenu){
         const headerList = headerMenu.querySelector('.header__list');
@@ -194,4 +196,52 @@ console.log(FormWindow);
         }
     console.log('Навигацинное меню создано с помощью javascript!');
     }
+    
+
+    /* ЗАДАНИЕ 6 */
+
+    const menuContainer = document.querySelector('#menu');
+    if (menuContainer) {
+        const menuList = menuContainer.querySelector('.header__list');
+        const apiUrl = 'data.json';
+        const createItem = (linkUrl, title) => {
+            
+            const item = `
+                     <li class="header__item"><a class="header__item-link" href="${linkUrl}">${title}</a></li>
+            `;
+            return item;
+        }
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                console.log(typeof (data));
+
+                data.forEach(item => {
+                    const headerItem = createItem(item.link, item.title);
+                    menuList.insertAdjacentHTML('beforeend', headerItem);
+                });
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке данных:', error);
+            });
+    }
+
+
+    /* ПРЕДЗАГРУЗЧИК */
+    const preloader = document.querySelector(".preloader");
+    const content = document.querySelector(".content");
+    if (preloader && content) {
+        setTimeout(() => {
+
+            preloader.style.opacity = "0";
+            preloader.style.visibility = "hidden";
+
+            content.style.display = "block";
+
+            preloader.remove();
+        }, 3000);
+    }
+
     

@@ -12,3 +12,5 @@
 @import "media.css";
 /* Подключение стилей относящихся к media */
 @import "typography.css";
+/* Подключение стилей относящихся к media */
+@import "preloader.css";
