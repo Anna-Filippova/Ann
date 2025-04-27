@@ -227,7 +227,7 @@ if (headerMenu) {
 
 /* ЗАДАНИЕ 6 */
 
-const menuContainer = document.querySelector('#menu');
+const menuContainer = document.querySelector('.header__menu');
 if (menuContainer) {
     const menuList = menuContainer.querySelector('.header__list');
     const apiUrl = 'data.json';
